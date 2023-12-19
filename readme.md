@@ -1,4 +1,10 @@
-# Instalación
+# Requisitos
+
+- Tener instalado nodejs
+- Tener instalado docker y docker compose
+- Tener instalado postman
+
+## Instalación
 
 Para utilizar cualquiera de las dos api's debe utilizar el comando:
 
@@ -14,7 +20,7 @@ Posteriormente debe ejecutar el comando:
 
 Asegurandose de estar parado en la raiz del proyecto, con esto se busca instalar y levantar las bases de datos que usarás en este ejemplo
 
-## Base de datos 
+## Base de datos
 
 Para ejecutar este ejemplo es necesario que usando una base de datos postgres se ejecute el siguiente comando:
 
@@ -30,7 +36,6 @@ CREATE TABLE personas (
 
 Seguido del siguiente comando, siguiendo el esquema de datos planteado por el archivo "mock.json", se recomienda usar este esquema ya que contiene suficientes bites para notar la diferencia de rendimiento en tiempo de respuesta cuando usemos la Api.
 
-
 ```
 
 INSERT INTO personas (id, nombre, hobbies)
@@ -45,4 +50,12 @@ VALUES (
   ]
 );
 
+```
+
+## Http Request
+
+Usando postman puedes importar el siguiente curl para hacer una prueba de rendimiento
+
+```
+  curl --location 'localhost:3000/data/1'
 ```
